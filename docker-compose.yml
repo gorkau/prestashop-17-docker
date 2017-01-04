@@ -1,0 +1,33 @@
+version: '2'
+services:
+  nginx-prestashop:
+    image: gorkau/prestashop-docker-nginx:latest
+    ports:
+     - "81:80"
+    volumes:
+     - /home/gorka/webs/prestashop-1.7:/var/www/html
+    networks:
+     - appnet
+  php:
+    image: gorkau/prestashop-docker-php7:latest
+    volumes:
+     - /home/gorka/webs/prestashop-1.7:/var/www/html
+    networks:
+     - appnet
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: prestashop
+      MYSQL_USER: prestashop
+      MYSQL_PASSWORD: secret
+    volumes:
+     - data:/var/lib/mysql
+    networks:
+     - appnet
+networks:
+  appnet:
+    driver: "bridge"
+volumes:
+  data:
+    driver: "local"
