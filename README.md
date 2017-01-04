@@ -27,13 +27,13 @@ Una vez has modificado el fichero docker-compose.yml y estén instalador Docker 
 
 Para descargarlo puedes hacer, por ejemplo:
 
-----
 git clone https://github.com/gorkau/prestashop-17-docker.git
-----
 
 Una vez descargado el siguiente paso es instalar. Desde la carpeta del paso anterior donde has descargado el fichero ejecuta el comando:
 
 docker-compose up -d
+
+(NOTA: Cuando reinicies el navegador tendrás que volver a ejecutar este comando desde la carpeta donde tengas el fichero docker-compose.yml).
 
 Ahora abre el navegador y entra en la dirección:
 
