@@ -3,7 +3,7 @@ services:
   nginx-prestashop:
     image: gorkau/prestashop-docker-nginx:latest
     ports:
-     - "81:80"
+     - "80:80"
     volumes:
      - /home/gorka/webs/prestashop-1.7:/var/www/html
     networks:
