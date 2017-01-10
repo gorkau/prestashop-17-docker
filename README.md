@@ -14,7 +14,7 @@ Deberás editar el fichero docker-compose.yml para ajustarlo a tu forma de traba
 
 En el servicio _nginx-prestashop_ (sección nginx-prestashop):
 
-* Cambia el puerto 83 por el que quieras usar (si no tienes ningún otro servidor web lo normal es usar el puerto 80. En ese caso cambia "83:80" por "80:80".
+* Cambia el puerto 80 por el que quieras usar (si no tienes ningún otro servidor web lo normal es usar el puerto 80). Si tienes el puerto 80 ocupado puedes usar, por ejemplo el 81. En ese caso cambia "80:80" por "81:80".
 * Cambia el volumen por la ruta donde quieras instalar PrestaShop. Si lo tienes, por ejemplo, en /var/www/prestashop deberías cambiar /home/gorka/webs/prestashop-1.7 por /var/www/prestashop.
 
 En el servicio _php_ (sección php):
